@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Challenge 0: Building A Dynamic Website</title>
+    </head>
+
+    <body style="background-color:white">
+        <form>
+            <p style="text-align: center;"><img src="Xueyi.jpg" style="width: 200px; height: 250px;"></p>
+            <p id="title" style="text-align: center; font-weight: bold; font-size: 24pt; font-family: sans-serif; color: black">Xueyi Huang</p>
+            <a id="p2"></a>
+            <a id="p1" style="color:black">Xueyi is a PhD student in the Department of Psychology. She is interested in mental representations, perception and imagery, and how the external world constructs our inner mind. She obtained a BS from Zhejiang University, where she worked in Professor Hui Chen's lab and explored visual imagery and visual working memory. </a>            
+            <br>
+            <input type="text" id="field" value="">
+            <input type="button"  value="Add place of birth"  style="background-color: blue; color: white;" id="city">
+            <br>
+            <input type="button"  value="Night mode"  style="background-color: black; color: white;" id="mode">
+            <br>
+            <p id="date"></p>
+                <script>
+                    document.getElementById("date").innerHTML = Date();
+                </script>
+        </form>
+    </body>
+
+    <script>
+        var body = document.body;
+
+        city.onclick = function AddCity(){
+            var city = document.getElementById("field").value;
+            if (city!=""){
+                p2.innerHTML = ("Xueyi was born in " + city + ". ");
+                document.getElementById("date").innerHTML = Date();
+            }
+        }
+
+        mode.onclick = function ChangeMode () {
+            document.getElementById("date").innerHTML = Date();
+            if (mode.value == "Night mode"){
+                mode.style = "background-color: white; color: black;"
+                body.style.backgroundColor = "black";
+                p1.style.color = "white";
+                p2.style.color = "white";
+                title.style.color = "white";
+                date.style.color = "white";
+                mode.value = "Day mode";
+            }
+            else{
+                mode.style = "background-color: black; color: white;"
+                body.style.backgroundColor = "white";
+                p1.style.color = "black";
+                p2.style.color = "black";
+                title.style.color = "black";
+                date.style.color = "black";
+                mode.value = "Night mode";
+            }
+        }
+    </script>
+</html>
+
+<!--
+    OK! 1.1 Create a website in HTML where you display the title: "Challenge 0: Building A Dynamic Website"
+
+    half done 1.2 Create a short bio paragraph describing who you are in 3 or 4 sentences.
+
+    OK! 1.3 Using a CSS stylesheet, make sure the title is in bold, centered and at least 24pt black sans serif font.  Make the biosketch text justified.  Everything should be on a light background.
+
+    1.4 Add your headshot photo.  Make sure it appears in centered on the screen and above your name and biosketch.  Make sure it is exactly 200px wide and 250px tall.  Resize your photo using CSS code, not by cropping the photo before uploading it.  Crop the image to make sure it doesn't appear distorted (e.g. squeezed or stretched).
+
+    OK! 1.5 Put an input text box below your bio sketch where users can type in.
+
+    OK! 1.6 Put a blue button next to the input box that says in white "Add place of birth".  When the button is pressed the sentence "YOUR NAME was born in CITY" (where CITY is the text that was input in the input box) gets automatically added as the first sentence of the biosketch.
+
+    OK! 1.7 Add a black button below the input box that says in white font: "Night mode".  When pressed, invert the background and font colors (i.e. the blackground is now black and the fonts are in a light color).
+
+    OK! 1.8 Make the "Night mode" button change to "Day mode" automatically when pressed.  It should now be a white button with black text.  When pressed, the new "Day mode" button should reverse the theme of the website to light background and black font, and the button should become again the "Night mode" button.
+
+    ==BONUS==
+
+    1.9 Add below everything the current date and the current time in a different font (e.g. serif).  Make sure it updates both the date and time every time either button is presse
+-->
