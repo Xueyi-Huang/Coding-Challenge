@@ -1,60 +1,88 @@
 <html>
-    <head>
-        <title>Challenge 0: Building A Dynamic Website</title>
-    </head>
+  <head>
+    <title>Challenge 0: Building A Dynamic Website</title>
+  </head>
 
-    <body style="background-color:white">
-        <form>
-            <p style="text-align: center;"><img src="Xueyi.jpg" style="width: 200px; height: 250px;"></p>
-            <p id="title" style="text-align: center; font-weight: bold; font-size: 24pt; font-family: sans-serif; color: black">Xueyi Huang</p>
-            <a id="p2"></a>
-            <a id="p1" style="color:black">Xueyi is a PhD student in the Department of Psychology. She is interested in mental representations, perception and imagery, and how the external world constructs our inner mind. She obtained a BS from Zhejiang University, where she worked in Professor Hui Chen's lab and explored visual imagery and visual working memory. </a>            
-            <br>
-            <input type="text" id="field" value="">
-            <input type="button"  value="Add place of birth"  style="background-color: blue; color: white;" id="city">
-            <br>
-            <input type="button"  value="Night mode"  style="background-color: black; color: white;" id="mode">
-            <br>
-            <p id="date"></p>
-                <script>
-                    document.getElementById("date").innerHTML = Date();
-                </script>
-        </form>
-    </body>
+  <body style="background-color: white">
+    <form>
+      <p style="text-align: center">
+        <img src="Xueyi_Huang.jpg" style="width: 200px; height: 250px" />
+      </p>
+      <p
+        id="title"
+        style="
+          text-align: center;
+          font-weight: bold;
+          font-size: 24pt;
+          font-family: sans-serif;
+          color: black;
+        "
+      >
+        Xueyi Huang
+      </p>
+      <a id="p2"></a>
+      <a id="p1" style="color: black"
+        >Xueyi is a PhD student in the Department of Psychology. She is
+        interested in mental representations, perception and imagery, and how
+        the external world constructs our inner mind. She obtained a BS from
+        Zhejiang University, where she worked in Professor Hui Chen's lab and
+        explored visual imagery and visual working memory.
+      </a>
+      <br />
+      <input type="text" id="field" value="" />
+      <input
+        type="button"
+        value="Add place of birth"
+        style="background-color: blue; color: white"
+        id="city"
+      />
+      <br />
+      <input
+        type="button"
+        value="Night mode"
+        style="background-color: black; color: white"
+        id="mode"
+      />
+      <br />
+      <p id="date"></p>
+      <script>
+        document.getElementById("date").innerHTML = Date();
+      </script>
+    </form>
+  </body>
 
-    <script>
-        var body = document.body;
+  <script>
+    var body = document.body;
 
-        city.onclick = function AddCity(){
-            var city = document.getElementById("field").value;
-            if (city!=""){
-                p2.innerHTML = ("Xueyi was born in " + city + ". ");
-                document.getElementById("date").innerHTML = Date();
-            }
-        }
+    city.onclick = function AddCity() {
+      var city = document.getElementById("field").value;
+      if (city != "") {
+        p2.innerHTML = "Xueyi was born in " + city + ". ";
+        document.getElementById("date").innerHTML = Date();
+      }
+    };
 
-        mode.onclick = function ChangeMode () {
-            document.getElementById("date").innerHTML = Date();
-            if (mode.value == "Night mode"){
-                mode.style = "background-color: white; color: black;"
-                body.style.backgroundColor = "black";
-                p1.style.color = "white";
-                p2.style.color = "white";
-                title.style.color = "white";
-                date.style.color = "white";
-                mode.value = "Day mode";
-            }
-            else{
-                mode.style = "background-color: black; color: white;"
-                body.style.backgroundColor = "white";
-                p1.style.color = "black";
-                p2.style.color = "black";
-                title.style.color = "black";
-                date.style.color = "black";
-                mode.value = "Night mode";
-            }
-        }
-    </script>
+    mode.onclick = function ChangeMode() {
+      document.getElementById("date").innerHTML = Date();
+      if (mode.value == "Night mode") {
+        mode.style = "background-color: white; color: black;";
+        body.style.backgroundColor = "black";
+        p1.style.color = "white";
+        p2.style.color = "white";
+        title.style.color = "white";
+        date.style.color = "white";
+        mode.value = "Day mode";
+      } else {
+        mode.style = "background-color: black; color: white;";
+        body.style.backgroundColor = "white";
+        p1.style.color = "black";
+        p2.style.color = "black";
+        title.style.color = "black";
+        date.style.color = "black";
+        mode.value = "Night mode";
+      }
+    };
+  </script>
 </html>
 
 <!--
